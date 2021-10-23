@@ -1,4 +1,4 @@
-@import url("styles/reset.css");
+@import url("reset.css");
 @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
@@ -24,7 +24,7 @@ body {
 }
 
 .container__card {
-  background: var(--black) url(assets/images/top_backgroud.png) no-repeat;
+  background: var(--black) url(../assets/images/top_backgroud.png) no-repeat;
   background-size: 100% 430px;
   display: grid;
   padding: 169px 56px 56px 56px;
