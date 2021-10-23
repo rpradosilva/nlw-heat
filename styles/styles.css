@@ -1,0 +1,79 @@
+@import url("/styles/reset.css");
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --white: #ffffff;
+  --lightgray: #e1e1e6;
+  --gray: #c4c4cc;
+  --darkgray: #323238;
+  --black: #202024;
+  --pink: #ff008e;
+  --yellow: #ffcd1e;
+}
+
+body {
+  background: var(--black);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 812px;
+  margin: 0 auto;
+  width: 375px;
+}
+
+.container__card {
+  background: var(--black) url(/assets/images/top_backgroud.png) no-repeat;
+  background-size: 100% 430px;
+  display: grid;
+  padding: 169px 56px 56px 56px;
+  place-items: center;
+  text-align: center;
+}
+
+.card__avatar-logo {
+  margin: -16px 0 0 0;
+  position: absolute;
+}
+
+.card__title {
+  color: var(--lightgray);
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  margin: 24px 0 0 0;
+}
+
+.card__github {
+  color: var(--gray);
+  font-size: 16px;
+  line-height: 26px;
+  margin: 4px 0 0 0;
+}
+
+.card__github-icon {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 8px 0 0;
+}
+
+.card__text {
+  color: var(--lightgray);
+  font-size: 14px;
+  line-height: 24px;
+  margin: 32px 0 0 0;
+  word-break: break-all;
+}
+
+.card__social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  margin: 64px 0 0 0;
+}
+
+.card__social-link {
+  height: 48px;
+  width: 48px;
+}
