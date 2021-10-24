@@ -1,4 +1,4 @@
-const socialId = {
+let socialId = {
   github: "rpradosilva",
   youtube: "UCngcgGLbSjDUO-H2p5j43DA",
   instagram: "rpradosilva",
