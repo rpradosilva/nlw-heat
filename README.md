@@ -25,6 +25,7 @@ The project is create a badge to DoWhile2021, a Rocketseat event.
 - [x] Fully responsive layout
 - [x] Customization data with github API
 - [x] Using GSAP to animate some items
+- [x] Configure your badge
 
 ## License
 
