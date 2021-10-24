@@ -1,7 +1,6 @@
 <br>
 
 <div align="center">
-    <img src=".github/logo.png" alt="Logo Repo" width="240">
     <h1>
       Badge DoWhile2021
     </h1>
@@ -11,7 +10,7 @@
 <br>
 <div align="center">
 
-<img src=".github/print.png" alt="print" width="100%">
+<img src=".github/print.gif" alt="print" width="400">
 
 </div>
 
@@ -25,6 +24,7 @@ The project is create a badge to DoWhile2021, a Rocketseat event.
 - [x] Fully responsive layout
 - [x] Customization data with github API
 - [x] Using GSAP to animate some items
+- [x] Perspective animation with Vanilatilt.js
 - [x] Configure your badge
 
 ## License
