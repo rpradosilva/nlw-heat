@@ -71,7 +71,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 64px 0 0 0;
 }
 
 .card__social-link {
@@ -79,7 +78,7 @@ body {
   border-radius: 2px;
   display: block;
   height: 48px;
-  margin: 0 4px;
+  margin: 64px 4px 0 4px;
   transition: 0.3s;
 }
 
