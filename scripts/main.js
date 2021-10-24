@@ -33,25 +33,25 @@ function changeProfile(githubId) {
     });
 }
 
-function insertSocialLinks(youtube, instagram, facebook, twitter) {
-  const youtubeUrl = "https://www.youtube.com/channel/"; //UCngcgGLbSjDUO-H2p5j43DA
-  const instagramUrl = "https://www.instagram.com/"; //rpradosilva
-  const facebookUrl = "https://www.facebook.com/"; // ??
-  const twitterUrl = "https://twitter.com/"; //rpradosilva
+function insertSocialLinks(youtubeId, instagramId, facebookId, twitterId) {
+  const youtubeUrl = "https://www.youtube.com/channel/";
+  const instagramUrl = "https://www.instagram.com/";
+  const facebookUrl = "https://www.facebook.com/";
+  const twitterUrl = "https://twitter.com/";
   let socialLinks = document.querySelectorAll(".card__social-link");
 
   for (const link of socialLinks) {
     if (link.classList.contains("youtube")) {
-      link.setAttribute("href", `${youtubeUrl}${youtube}`);
+      link.setAttribute("href", `${youtubeUrl}${youtubeId}`);
     }
     if (link.classList.contains("instagram")) {
-      link.setAttribute("href", `${instagramUrl}${instagram}`);
+      link.setAttribute("href", `${instagramUrl}${instagramId}`);
     }
     if (link.classList.contains("facebook")) {
-      link.setAttribute("href", `${facebookUrl}${facebook}`);
+      link.setAttribute("href", `${facebookUrl}${facebookId}`);
     }
     if (link.classList.contains("twitter")) {
-      link.setAttribute("href", `${twitterUrl}${twitter}`);
+      link.setAttribute("href", `${twitterUrl}${twitterId}`);
     }
   }
 }
