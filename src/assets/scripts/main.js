@@ -30,6 +30,7 @@ function changeProfile(githubId) {
       link.setAttribute("href", `${data.html_url}`);
       username.innerHTML = data.login;
       description.innerHTML = data.bio;
+      document.title = `${data.name} - DoWhile 2021`;
     });
 }
 
