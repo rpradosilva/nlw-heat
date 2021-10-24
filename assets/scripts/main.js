@@ -14,6 +14,21 @@ insertSocialLinks(
   socialId.twitter
 );
 
+function updateBadge() {
+  const githubUser = document.querySelector(".input__github input").value;
+  const youtubeUser = document.querySelector(".input__youtube input").value;
+  const instagramUser = document.querySelector(".input__instagram input").value;
+  const facebookUser = document.querySelector(".input__facebook input").value;
+  const twitterUser = document.querySelector(".input__twitter input").value;
+
+  if (githubUser != "") {
+    changeProfile(githubUser);
+    insertSocialLinks(youtubeUser, instagramUser, facebookUser, twitterUser);
+  } else {
+    insertSocialLinks(youtubeUser, instagramUser, facebookUser, twitterUser);
+  }
+}
+
 function changeProfile(githubId) {
   const url = `https://api.github.com/users/${githubId}`;
   let name = document.querySelector(".card__title");
