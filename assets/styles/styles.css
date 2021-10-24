@@ -170,17 +170,28 @@ body {
   width: 48px;
 }
 
-.modal__form-submit {
-  background: var(--pink);
+.modal__form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.modal__form-buttons button {
   border: 0px;
-  border-radius: 8px;
-  color: var(--white);
+  border-radius: 4px;
+  cursor: pointer;
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
   margin: 16px 0 0 0;
   padding: 16px;
   text-transform: uppercase;
+  width: 100%;
+}
+
+.modal__form-submit {
+  background: var(--pink);
+  color: var(--white);
 }
 
 .modal__box {

@@ -15,11 +15,13 @@ insertSocialLinks(
 );
 
 function updateBadge() {
-  const githubUser = document.querySelector(".input__github input").value;
-  const youtubeUser = document.querySelector(".input__youtube input").value;
-  const instagramUser = document.querySelector(".input__instagram input").value;
-  const facebookUser = document.querySelector(".input__facebook input").value;
-  const twitterUser = document.querySelector(".input__twitter input").value;
+  let githubUser = document.querySelector("input[name='github-id']").value;
+  let youtubeUser = document.querySelector("input[name='youtube-id']").value;
+  let instagramUser = document.querySelector(
+    "input[name='instagram-id']"
+  ).value;
+  let facebookUser = document.querySelector("input[name='facebook-id']").value;
+  let twitterUser = document.querySelector("input[name='twitter-id']").value;
 
   if (githubUser != "") {
     changeProfile(githubUser);
@@ -54,20 +56,53 @@ function insertSocialLinks(youtubeId, instagramId, facebookId, twitterId) {
   const instagramUrl = "https://www.instagram.com/";
   const facebookUrl = "https://www.facebook.com/";
   const twitterUrl = "https://twitter.com/";
-  let socialLinks = document.querySelectorAll(".card__social-link");
 
-  for (const link of socialLinks) {
-    if (link.classList.contains("youtube")) {
-      link.setAttribute("href", `${youtubeUrl}${youtubeId}`);
+  createSocialButton("youtube", youtubeUrl, youtubeId);
+  createSocialButton("instagram", instagramUrl, instagramId);
+  createSocialButton("facebook", facebookUrl, facebookId);
+  createSocialButton("twitter", twitterUrl, twitterId);
+}
+
+function insertElement(id, htmlTag, destinationClass) {
+  let container = document.querySelector(destinationClass);
+  let element = document.createElement(htmlTag);
+
+  container.appendChild(element);
+  element.setAttribute("id", id);
+}
+
+function insertAttr(destinationId, attr, value) {
+  let container = document.querySelector(`#${destinationId}`);
+  container.setAttribute(attr, value);
+}
+
+function createSocialButton(social, url, value) {
+  if (value != "") {
+    if (document.querySelector(`#card__social-${social}`) != null) {
+      document.querySelector(`#card__social-${social}`).remove();
     }
-    if (link.classList.contains("instagram")) {
-      link.setAttribute("href", `${instagramUrl}${instagramId}`);
-    }
-    if (link.classList.contains("facebook")) {
-      link.setAttribute("href", `${facebookUrl}${facebookId}`);
-    }
-    if (link.classList.contains("twitter")) {
-      link.setAttribute("href", `${twitterUrl}${twitterId}`);
-    }
+    insertElement(`card__social-${social}`, "li", ".card__social");
+    insertElement(`card__social-a-${social}`, "a", `#card__social-${social}`);
+    insertAttr(`card__social-a-${social}`, "href", `${url}${value}`);
+    insertAttr(`card__social-a-${social}`, "target", "_blank");
+    insertAttr(
+      `card__social-a-${social}`,
+      "class",
+      `card__social-link ${social}`
+    );
+    insertElement(
+      `card__social-icon-${social}`,
+      "img",
+      `#card__social-a-${social}`
+    );
+    insertAttr(
+      `card__social-icon-${social}`,
+      "src",
+      `assets/images/${social}.svg`
+    );
+    insertAttr(`card__social-icon-${social}`, "alt", social);
+  } else {
+    insertElement(`card__social-${social}`, "li", ".card__social");
+    document.querySelector(`#card__social-${social}`).remove();
   }
 }
